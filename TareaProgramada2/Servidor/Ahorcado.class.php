@@ -10,6 +10,8 @@ class Ahorcado {
 	
 	//Se selecciona una palabra aleatoria de las definidas en $palabras
 	public function __construct() {
+		$db=new \DB\SQL('pgsql:host=localhost;port=5432;dbname=ci2413','eb17016','eb17016');
+			$db->exec('SET search_path TO eb17016');
 		$rand = rand(0, sizeof($this->palabras) - 1);	// Un numero de 0 a cantidad de palabras - 1
 		$this->palabraJuego = $this->palabras[$rand];
 		//Sustituimos las letras por _
@@ -58,13 +60,29 @@ class Ahorcado {
 	}
 	
 	//Guarda el puntaje en la base de datos
-	public guardarPuntaje(){
-		
+	public guardarPuntaje($nombre){
+		$contacto=new DB\SQL\Mapper($db,'puntajes');
+		$contacto->reset();
+		$contacto->tiempo= this->getTiempo();
+		$contacto->nombre=$nombre;
+		if($contacto->save()){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 	
 	//Retorna los diez mejores jugadores
 	public getMejores(){
-	
+		$contactos=$db->exec('SELECT tiempo, nombre FROM puntajes ORDER BY tiempo ASC LIMIT 10');
+		$contador = 1;
+		$respuesta = "";
+		foreach($contactos as $contacto){
+			$respuesta .= $contador."\t".$contacto['tiempo']."\t".$contacto['nombre']."\n";
+			$contador++;
+		}
+		return $respuesta;
 	}
 	
 }
