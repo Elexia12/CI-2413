@@ -22,17 +22,17 @@ class Ahorcado {
 	}
 	
 	//Tiempo que tardo en adivinar la palabra
-	public getTiempo(){
+	public function getTiempo(){
 		return $this->tiempoInicio - $this->tiempoFin;
 	}
 	
-	public getPalabraOculta(){
+	public function getPalabraOculta(){
 		return $this->palabraOculta;
 	}
 	
 	//Recibe la letra digigtada por el jugador
 	//Retorna el estado actual de palabra oculta (despues del intento de adivinar)
-	public juego($letra){
+	public function juego($letra){
 		$letra = strtolower($letra);
 		if(strpos($letra) === false){			//Si la letra no esta, se resta la cantidad de intentos
 			$this->intentos = Sthis->intentos - 1;
@@ -47,7 +47,7 @@ class Ahorcado {
 	}
 	
 	//Verifica el estado del juego
-	public verificarJuego(){
+	public function verificarJuego(){
 		$res = "continuar";
 		if($this->palabraOculta == $this->palabraJuego){
 			$res = "gano";
@@ -60,7 +60,7 @@ class Ahorcado {
 	}
 	
 	//Guarda el puntaje en la base de datos
-	public guardarPuntaje($nombre){
+	public function guardarPuntaje($nombre){
 		$contacto=new DB\SQL\Mapper($db,'puntajes');
 		$contacto->reset();
 		$contacto->tiempo= this->getTiempo();
@@ -74,7 +74,7 @@ class Ahorcado {
 	}
 	
 	//Retorna los diez mejores jugadores
-	public getMejores(){
+	public function getMejores(){
 		$contactos=$db->exec('SELECT tiempo, nombre FROM puntajes ORDER BY tiempo ASC LIMIT 10');
 		$contador = 1;
 		$respuesta = "";

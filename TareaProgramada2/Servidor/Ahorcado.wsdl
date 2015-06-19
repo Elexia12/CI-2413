@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+
+<!-- Descripcion WSDL de la clase Hola Mundo. -->
+
+<definitions name="Juego_Ahorcado"
+             targetNamespace="urn:Juego_Ahorcado"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:tns="urn:Juego_Ahorcado"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+  <!-- Tipos complejos -->
+
+  <types xmlns="http://schemas.xmlsoap.org/wsdl/" />
+
+  <!-- Mensajes para comunicarse con la clase Ahorcado. -->
+             
+  <message name="getTiempoRequest"></message>
+
+  <message name="getTiempoResponse">
+    <part name="tiempoTotal" type="xsd:int" />
+  </message>
+
+  <message name="getPalabraOcultaRequest"></message>
+
+  <message name="getPalabraOcultaResponse">
+    <part name="palabraOculta" type="xsd:string" />
+  </message>
+
+  <message name="juegoRequest">
+	<part name="letra" type="xsd:string" />
+  </message>
+
+  <message name="juegoResponse">
+    <part name="palabraOculta" type="xsd:string" />
+  </message>
+  
+  <message name="verificarJuegoRequest"></message>
+
+  <message name="verificarJuegoResponse">
+    <part name="resultado" type="xsd:string" />
+  </message>
+  
+  <message name="guardarPuntajeRequest">
+	<part name="nombre" type="xsd:string" />
+  </message>
+
+  <message name="guardarPuntajeResponse">
+   <part name="guardo" type="xsd:boolean" />
+  </message>
+  
+  <message name="getPalabraOcultaRequest"></message>
+
+  <message name="getPalabraOcultaResponse">
+    <part name="puntajes" type="xsd:string" />
+  </message>
+
+  <!-- Puerto para comunicar con la clase Ahorcado, "Juego_Ahorcado" -->
+
+  <portType name="Juego_AhorcadoPort">
+
+    <operation name="getTiempo">
+      <input message="tns:getTiempoRequest" />
+      <output message="tns:getTiempoResponse" />
+    </operation>
+
+    <operation name="getPalabraOculta">
+      <input message="tns:getPalabraOcultaRequest" />
+      <output message="tns:getPalabraOcultaResponse" />
+    </operation>
+
+    <operation name="juego">
+      <input message="tns:juegoRequest" />
+      <output message="tns:juegoResponse" />
+    </operation>
+	
+	<operation name="verificarJuego">
+      <input message="tns:verificarJuegoRequest" />
+      <output message="tns:verificarJuegoResponse" />
+    </operation>
+
+    <operation name="guardarPuntaje">
+      <input message="tns:guardarPuntajeRequest" />
+      <output message="tns:guardarPuntajeResponse" />
+    </operation>
+
+    <operation name="getMejores">
+      <input message="tns:getMejoresRequest" />
+      <output message="tns:getMejoresResponse" />
+    </operation>
+
+  </portType>
+
+  <!-- Vinculacion de los llamados con el transporte - RPC, SOAP over HTTP -->
+
+  <binding name="Juego_AhorcadoBinding" type="tns:Juego_AhorcadoPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+
+    <operation name="getTiempo">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#getTiempo" />
+      <input>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+
+    <operation name="getPalabraOculta">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#getPalabraOculta" />
+      <input>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+				   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+				   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+
+    <operation name="juego">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#juego" />
+      <input>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+				   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+	
+	<operation name="verificarJuego">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#verificarJuego" />
+      <input>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+
+    <operation name="guardarPuntaje">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#guardarPuntaje" />
+      <input>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+				   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+				   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+
+    <operation name="getMejores">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#getMejores" />
+      <input>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+                   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </input>
+      <output>
+        <soap:body use="encoded"
+		           namespace="urn:Juego_Ahorcado"
+				   encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </output>
+    </operation>
+  </binding>
+
+  <!-- Punto de comunicacion con la clase Ahorcado -->
+
+  <service name="Juego_Ahorcado">
+    <documentation />
+    <port name="Juego_AhorcadoPort" binding="tns:Juego_AhorcadoBinding">
+      <soap:address location="http://titanic.ecci.ucr.ac.cr:80/~eb17016/TareaProgramada2/Servidor/AhorcadoService.php" />
+    </port>
+  </service>
+
+</definitions>
