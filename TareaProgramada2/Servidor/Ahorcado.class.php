@@ -15,7 +15,7 @@ class Ahorcado {
 		$rand = rand(0, sizeof($this->palabras) - 1);	// Un numero de 0 a cantidad de palabras - 1
 		$this->palabraJuego = $this->palabras[$rand];
 		//Sustituimos las letras por _
-		for($i=0; i<$strlen(this->palabraJuego); i++){
+		for($i=0; i<$strlen($this->palabraJuego); $i++){
 			$this->palabraOculta = $this->palabraOculta . "_";
 		}
 		$this->tiempoInicio = time();
@@ -35,15 +35,15 @@ class Ahorcado {
 	public function juego($letra){
 		$letra = strtolower($letra);
 		if(strpos($letra) === false){			//Si la letra no esta, se resta la cantidad de intentos
-			$this->intentos = Sthis->intentos - 1;
+			$this->intentos = $this->intentos-1;
 		}else{
-			for($i=0; i<strlen($this->palabraJuego); i++){
+			for($i=0; $i<strlen($this->palabraJuego); $i++){
 				if($this->palabraJuego[$i] == $letra){
 					$this->palabraOculta[$i] = $letra;			//Se cambia el _ por la letra encontrada
 				}
 			}
 		}
-		return $this->palabraOculta
+		return $this->palabraOculta;
 	}
 	
 	//Verifica el estado del juego
@@ -63,7 +63,7 @@ class Ahorcado {
 	public function guardarPuntaje($nombre){
 		$contacto=new DB\SQL\Mapper($db,'puntajes');
 		$contacto->reset();
-		$contacto->tiempo= this->getTiempo();
+		$contacto->tiempo= $this->getTiempo();
 		$contacto->nombre=$nombre;
 		if($contacto->save()){
 			return true;
