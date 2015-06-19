@@ -1,5 +1,10 @@
 <?php
 
+	require_once('fatfree/lib/base.php');
+	require_once('fatfree/lib/db/sql.php');
+	require_once('fatfree/lib/db/sql/mapper.php');
+	require_once('fatfree/lib/db/sql/session.php');
+
 class Ahorcado {
 	private $intentos = 8; //Aun no se cuantos, cuando hagamos la interfaz definimos. Si intentos llega a 0 pierde, se disminuye en 1 cada vez que el jugador falla
 	private $tiempoInicio;
