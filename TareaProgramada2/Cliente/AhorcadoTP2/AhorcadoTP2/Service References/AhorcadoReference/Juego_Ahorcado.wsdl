@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:Juego_Ahorcado" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="Juego_Ahorcado" targetNamespace="urn:Juego_Ahorcado" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types xmlns="http://schemas.xmlsoap.org/wsdl/" />
+  <wsdl:message name="getTiempoRequest" />
+  <wsdl:message name="getTiempoResponse">
+    <wsdl:part name="tiempoTotal" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="getPalabraOcultaRequest" />
+  <wsdl:message name="getPalabraOcultaResponse">
+    <wsdl:part name="palabraOculta" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="juegoRequest">
+    <wsdl:part name="letra" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="juegoResponse">
+    <wsdl:part name="palabraOculta" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="verificarJuegoRequest" />
+  <wsdl:message name="verificarJuegoResponse">
+    <wsdl:part name="resultado" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="guardarPuntajeRequest">
+    <wsdl:part name="nombre" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="guardarPuntajeResponse">
+    <wsdl:part name="guardo" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getMejoresRequest" />
+  <wsdl:message name="getMejoresResponse">
+    <wsdl:part name="puntajes" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="Juego_AhorcadoPort">
+    <wsdl:operation name="getTiempo">
+      <wsdl:input message="tns:getTiempoRequest" />
+      <wsdl:output message="tns:getTiempoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPalabraOculta">
+      <wsdl:input message="tns:getPalabraOcultaRequest" />
+      <wsdl:output message="tns:getPalabraOcultaResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="juego">
+      <wsdl:input message="tns:juegoRequest" />
+      <wsdl:output message="tns:juegoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="verificarJuego">
+      <wsdl:input message="tns:verificarJuegoRequest" />
+      <wsdl:output message="tns:verificarJuegoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="guardarPuntaje">
+      <wsdl:input message="tns:guardarPuntajeRequest" />
+      <wsdl:output message="tns:guardarPuntajeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMejores">
+      <wsdl:input message="tns:getMejoresRequest" />
+      <wsdl:output message="tns:getMejoresResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Juego_AhorcadoBinding" type="tns:Juego_AhorcadoPort">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getTiempo">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#getTiempo" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPalabraOculta">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#getPalabraOculta" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="juego">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#juego" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificarJuego">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#verificarJuego" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="guardarPuntaje">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#guardarPuntaje" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMejores">
+      <soap:operation soapAction="urn:Juego_Ahorcado#Ahorcado#getMejores" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="urn:Juego_Ahorcado" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Juego_Ahorcado">
+    <documentation />
+    <wsdl:port name="Juego_AhorcadoPort" binding="tns:Juego_AhorcadoBinding">
+      <soap:address location="http://titanic.ecci.ucr.ac.cr:80/~eb17016/TareaProgramada2/Servidor/AhorcadoService.php" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

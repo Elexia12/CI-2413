@@ -1,0 +1,8 @@
+C:\Users\Xia\Documents\Varas de la U\CI-2413\Nueva carpeta\AhorcadoTP2\AhorcadoTP2\bin\Release\AhorcadoTP2.exe.config
+C:\Users\Xia\Documents\Varas de la U\CI-2413\Nueva carpeta\AhorcadoTP2\AhorcadoTP2\bin\Release\AhorcadoTP2.exe
+C:\Users\Xia\Documents\Varas de la U\CI-2413\Nueva carpeta\AhorcadoTP2\AhorcadoTP2\bin\Release\AhorcadoTP2.pdb
+C:\Users\Xia\Documents\Varas de la U\CI-2413\Nueva carpeta\AhorcadoTP2\AhorcadoTP2\obj\Release\AhorcadoTP2.Ahorcado.resources
+C:\Users\Xia\Documents\Varas de la U\CI-2413\Nueva carpeta\AhorcadoTP2\AhorcadoTP2\obj\Release\AhorcadoTP2.Properties.Resources.resources
+C:\Users\Xia\Documents\Varas de la U\CI-2413\Nueva carpeta\AhorcadoTP2\AhorcadoTP2\obj\Release\AhorcadoTP2.csproj.GenerateResource.Cache
+C:\Users\Xia\Documents\Varas de la U\CI-2413\Nueva carpeta\AhorcadoTP2\AhorcadoTP2\obj\Release\AhorcadoTP2.exe
+C:\Users\Xia\Documents\Varas de la U\CI-2413\Nueva carpeta\AhorcadoTP2\AhorcadoTP2\obj\Release\AhorcadoTP2.pdb
