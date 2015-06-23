@@ -85,7 +85,7 @@ class Ahorcado {
 		$contador = 1;
 		$respuesta = "";
 		foreach($contactos as $contacto){
-			$respuesta .= $contador."\t".$contacto['tiempo']."\t".$contacto['nombre']."\n";
+			$respuesta .= $contador."\t".$contacto['tiempo']."\t".$contacto['nombre']."%";
 			$contador++;
 		}
 		return $respuesta;
