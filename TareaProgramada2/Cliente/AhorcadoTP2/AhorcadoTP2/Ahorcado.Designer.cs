@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.puntajes = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imagen = new System.Windows.Forms.PictureBox();
             this.palabraOculta = new System.Windows.Forms.TextBox();
             this.letra = new System.Windows.Forms.TextBox();
             this.Aceptar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // puntajes
@@ -44,14 +44,15 @@
             this.puntajes.TabIndex = 0;
             this.puntajes.Text = "Puntajes";
             this.puntajes.UseVisualStyleBackColor = true;
+            this.puntajes.Click += new System.EventHandler(this.puntajes_Click);
             // 
-            // pictureBox1
+            // imagen
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(247, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(106, 142);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.imagen.Location = new System.Drawing.Point(247, 25);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(106, 142);
+            this.imagen.TabIndex = 1;
+            this.imagen.TabStop = false;
             // 
             // palabraOculta
             // 
@@ -61,6 +62,7 @@
             this.palabraOculta.Name = "palabraOculta";
             this.palabraOculta.Size = new System.Drawing.Size(186, 48);
             this.palabraOculta.TabIndex = 2;
+            this.palabraOculta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // letra
             // 
@@ -68,6 +70,7 @@
             this.letra.Name = "letra";
             this.letra.Size = new System.Drawing.Size(100, 20);
             this.letra.TabIndex = 3;
+            this.letra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Aceptar
             // 
@@ -87,11 +90,11 @@
             this.Controls.Add(this.Aceptar);
             this.Controls.Add(this.letra);
             this.Controls.Add(this.palabraOculta);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imagen);
             this.Controls.Add(this.puntajes);
             this.Name = "Ahorcado";
             this.Text = "Ahorcado";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,7 +103,7 @@
         #endregion
 
         private System.Windows.Forms.Button puntajes;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imagen;
         private System.Windows.Forms.TextBox palabraOculta;
         private System.Windows.Forms.TextBox letra;
         private System.Windows.Forms.Button Aceptar;
