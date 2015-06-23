@@ -32,7 +32,7 @@ class Ahorcado {
 	
 	//Tiempo que tardo en adivinar la palabra
 	public function getTiempo(){
-		return $this->tiempoInicio - $this->tiempoFin;
+		return $this->tiempoInicio - time();
 	}
 	
 	public function getPalabraOculta(){
