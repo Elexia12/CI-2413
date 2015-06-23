@@ -12,15 +12,12 @@ class Ahorcado {
 	private $intentos = 8; //Aun no se cuantos, cuando hagamos la interfaz definimos. Si intentos llega a 0 pierde, se disminuye en 1 cada vez que el jugador falla
 	private $tiempoInicio;
 	private $tiempoFin;
-	private $palabras = array(/*posibles palabras a adivinar*/);
+	private $palabras = array("marioneta", "camion", "mariposa", "carro", "perro", "ambulancia", "pez", "televisor");
 	private $palabraJuego = ""; //palabra a adivinar
 	private $palabraOculta = ""; //Letras sustituidas por _
 	
 	//Se selecciona una palabra aleatoria de las definidas en $palabras
 	public function __construct() {
-		$this->palabras = array("marioneta", "camion", "mariposa", "carro", "perro", "ambulancia", "pez", "televisor");
-		
-
 		$rand = rand(0, sizeof($this->palabras) - 1);	// Un numero de 0 a cantidad de palabras - 1
 		$this->palabraJuego = $this->palabras[$rand];
 		//Sustituimos las letras por _
