@@ -43,7 +43,7 @@ class Ahorcado {
 	//Retorna el estado actual de palabra oculta (despues del intento de adivinar)
 	public function juego($letra){
 		$letra = strtolower($letra);
-		if(strpos($this->palabraJuego, $letra) === false){			//Si la letra no esta, se resta la cantidad de intentos
+		if(strpos($letra) === false){			//Si la letra no esta, se resta la cantidad de intentos
 			$this->intentos = $this->intentos-1;
 		}else{
 			for($i=0; $i<strlen($this->palabraJuego); $i++){
