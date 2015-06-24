@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AhorcadoTP2.Ahorcado">
+    <Position X="3" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAACACACAAAACEAQBEAAAAUQEAAEASAA=</HashCode>
+      <FileName>Ahorcado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AhorcadoTP2.PantallaPuntajes">
+    <Position X="7.25" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACCAAAAAACCAAAACAAAIAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>PantallaPuntajes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AhorcadoTP2.Program">
+    <Position X="5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AhorcadoTP2.Properties.Resources">
+    <Position X="9.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AhorcadoTP2.Properties.Settings">
+    <Position X="7.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AhorcadoTP2.AhorcadoReference.Juego_AhorcadoPortClient" BaseTypeListCollapsed="true">
+    <Position X="5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAAEAAAAAIEAAQAAAAhAAAAAAgQAAEBAAAA=</HashCode>
+      <FileName>Service References\AhorcadoReference\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.69" Collapsed="true" />
+  </Class>
+  <Interface Name="AhorcadoTP2.AhorcadoReference.Juego_AhorcadoPort" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAAEAAAAAIEAAQAAAAhAAAAAAgQAAEBAAAA=</HashCode>
+      <FileName>Service References\AhorcadoReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AhorcadoTP2.AhorcadoReference.Juego_AhorcadoPortChannel" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\AhorcadoReference\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
