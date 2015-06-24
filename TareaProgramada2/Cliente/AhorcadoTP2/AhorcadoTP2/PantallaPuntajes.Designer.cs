@@ -34,6 +34,7 @@
             // 
             // puntajesBox
             // 
+            this.puntajesBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.puntajesBox.Location = new System.Drawing.Point(85, 27);
             this.puntajesBox.Multiline = true;
             this.puntajesBox.Name = "puntajesBox";

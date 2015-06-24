@@ -22,7 +22,7 @@ namespace AhorcadoTP2
 
         public Ahorcado()
         {
-            nombre = Microsoft.VisualBasic.Interaction.InputBox(null, "Escriba su nombre");
+            nombre = Microsoft.VisualBasic.Interaction.InputBox("Escriba su nombre", "Nombre");
             intentos = 8;
             InitializeComponent();
             ws = new AhorcadoReference.Juego_AhorcadoPortClient();
@@ -34,7 +34,7 @@ namespace AhorcadoTP2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!letra.Text.Equals("") || letra.Text.Length > 1)
+            if (!letra.Text.Equals(""))
             {
                 palabraOculta.Clear();
                 palabraOculta.Paste(ws.juego(letra.Text));
@@ -70,7 +70,7 @@ namespace AhorcadoTP2
 
         private void puntajes_Click(object sender, EventArgs e)
         {
-            pantallaPuntajes.getPuntajesBox().Paste(ws.getMejores());
+            pantallaPuntajes.getPuntajesBox().Paste(ws.getMejores().Replace("%", "\r\n"));
             pantallaPuntajes.Show();
         }
     }
