@@ -1,13 +1,10 @@
 <?php
-
 	require_once('fatfree/lib/base.php');
 	require_once('fatfree/lib/db/sql.php');
 	require_once('fatfree/lib/db/sql/mapper.php');
 	require_once('fatfree/lib/db/sql/session.php');
-
 $db=new \DB\SQL('pgsql:host=localhost;port=5432;dbname=ci2413','eb17016','eb17016');
 			$db->exec('SET search_path TO eb17016');
-
 class Ahorcado {
 	private $intentos = 8; //Aun no se cuantos, cuando hagamos la interfaz definimos. Si intentos llega a 0 pierde, se disminuye en 1 cada vez que el jugador falla
 	private $tiempoInicio;
@@ -29,7 +26,7 @@ class Ahorcado {
 	
 	//Tiempo que tardo en adivinar la palabra
 	public function getTiempo(){
-		return $this->tiempoInicio - time();
+		return time() - $this->tiempoInicio;
 	}
 	
 	public function getPalabraOculta(){
@@ -85,7 +82,7 @@ class Ahorcado {
 		$contador = 1;
 		$respuesta = "";
 		foreach($contactos as $contacto){
-			$respuesta .= $contador."\t".$contacto['tiempo']."\t".$contacto['nombre']."\n";
+			$respuesta .= $contador."\t".$contacto['tiempo']."\t".$contacto['nombre']."%";
 			$contador++;
 		}
 		return $respuesta;
