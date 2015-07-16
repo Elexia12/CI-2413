@@ -1,3 +1,0 @@
-La posicion del marcador es:
-9.901771873590537, -84.07940435611721
-Arrástrame para actualizar la posición.
