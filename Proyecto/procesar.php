@@ -7,7 +7,7 @@
 				<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
 				</script>
 			<![endif]-->
-		<link rel="stylesheet" type="text/css" href="../css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC_EbzI-13-H-wGPd5GJnM-9dd_ODXCdM"></script>
 		<script src="js/ruta.js"></script>
     </head>
