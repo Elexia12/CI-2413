@@ -9,7 +9,7 @@
 			<![endif]-->
 		<link rel="stylesheet" type="text/css" href="../css/estilo.css">
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC_EbzI-13-H-wGPd5GJnM-9dd_ODXCdM"></script>
-		<script src="../js/ruta.js"></script>
+		<script src="js/ruta.js"></script>
     </head>
 	<body>
 		<div id='inforuta' data-latrest='<?php echo $_POST['latrest']; ?>' data-longrest='<?php echo $_POST['longrest']; ?>' data-latped='<?php echo $_POST['latped']; ?>' data-longped='<?php echo $_POST['longped']; ?>'></div>

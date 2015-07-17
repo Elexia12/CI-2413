@@ -1,5 +1,6 @@
-<?php require_once('plantilla.php');?>
-
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,13 +13,13 @@
          <![endif]-->
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC_EbzI-13-H-wGPd5GJnM-9dd_ODXCdM"></script>
-    <script src="js/procesar.js"></script>
+    <script src="js/ruta.js"></script>
   </head>
   <body>
-	<form id="formulario" method="POST" action="procesar.php">
-		<button onclick="calcularRuta()">Obtener posici&oacute;n</button>
+	<button onclick="calcularRuta()">Obtener posici&oacute;n</button>
+	<form id="formulario" method="POST" action="procesarlogin.php">
+		<input type="submit" value="Cerrar Sesi&oacute;n">
 	</form>
-    <div id="map-canvas"></div>
+	<div id="map-canvas"></div>
   </body>
 </html>
-
