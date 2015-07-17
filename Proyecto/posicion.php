@@ -1,3 +1,5 @@
+<?php require_once('plantilla.php');?>
+
 <!DOCTYPE html>
 <html>
   <head>

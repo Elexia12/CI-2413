@@ -10,6 +10,8 @@
 		 <meta name="viewport" content="width=device-width, user-escalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		 <link rel="stylesheet" type="text/css" href="css/estilo.css">
+		 <script src="js/jquery.js"></script>
+		 <script src="js/bootstrap.min.js"></script>
    </head>
    <body>
       <div class="container">
@@ -49,7 +51,5 @@
          </nav>
       </header>
 	  </div>
-	  <script src="js/jquery.js"></script>
-	  <script src="js/bootstrap.min.js"></script>
    </body>
 </html>
