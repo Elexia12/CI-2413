@@ -1,18 +1,17 @@
 <?php 
 	session_start();
 	if(isset($_SESSION['permiso'])){
-		if($_SESSION['permiso'] == 0){
+		if($_SESSION['permiso'] == 1){
 			header("Location: http://titanic.ecci.ucr.ac.cr/~eb17016/Proyecto/ruta.php");
 			die();
 		}
-		if($_SESSION['permiso'] == 1){
-			header("Location: http://titanic.ecci.ucr.ac.cr/~eb17016/Proyecto/ruta.php");
+		if($_SESSION['permiso'] == 2){
+			header("Location: http://titanic.ecci.ucr.ac.cr/~eb17016/Proyecto/pedidos.php");
 			die();
 		}
 	}
 	else{
 ?>
-<!DOCTYPE html>
 <html>
   <head>
     <title>Login</title>

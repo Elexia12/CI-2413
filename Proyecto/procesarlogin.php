@@ -21,8 +21,8 @@
 		else{
 			if($grupo == "admin"){
 				$_SESSION['permiso'] = 2;
-				//header("Location: http://titanic.ecci.ucr.ac.cr/~eb17016/Proyecto/ruta.php");
-				//die();
+				header("Location: http://titanic.ecci.ucr.ac.cr/~eb17016/Proyecto/platillos.php");
+				die();
 			}
 			else{
 				header("Location: http://titanic.ecci.ucr.ac.cr/~eb17016/Proyecto/login.php");
