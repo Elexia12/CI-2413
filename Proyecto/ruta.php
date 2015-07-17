@@ -1,7 +1,13 @@
-<?php
+<?php 
 	session_start();
+	require_once('fatfree/lib/base.php');
+	require_once('fatfree/lib/db/sql.php');
+	require_once('fatfree/lib/db/sql/mapper.php');
+	require_once('fatfree/lib/db/sql/session.php');
+	if(isset($_SESSION['permiso'])){
+		if($_SESSION['permiso'] == 1){
+			$db=new \DB\SQL('mysql:host=localhost;port=3306;dbname=ci2413_eb05206','eb05206','eb05206');
 ?>
-<!DOCTYPE html>
 <html>
   <head>
     <title>Ruta</title>
@@ -16,6 +22,7 @@
     <script src="js/ruta.js"></script>
   </head>
   <body>
+	<div id='inforuta' data-latrest='9.901771873590537' data-longrest='-84.07940435611721' data-latped='9.901771873590537' data-longped='-84.07940435611'></div>
 	<button onclick="calcularRuta()">Obtener posici&oacute;n</button>
 	<form id="formulario" method="POST" action="procesarlogin.php">
 		<input type="submit" value="Cerrar Sesi&oacute;n">
@@ -23,3 +30,15 @@
 	<div id="map-canvas"></div>
   </body>
 </html>
+<?php
+		}
+		if($_SESSION['permiso'] == 2){
+			header("Location: http://titanic.ecci.ucr.ac.cr/~eb17016/Proyecto/procesarlogin.php");
+			die();
+		}
+	}
+	else{
+		header("Location: http://titanic.ecci.ucr.ac.cr/~eb17016/Proyecto/login.php");
+		die();
+	}
+?>
