@@ -1,4 +1,5 @@
 <?php 
+include("header.html"); 
 	session_start();
 	if(isset($_SESSION['permiso'])){
 		if($_SESSION['permiso'] == 1){
@@ -12,27 +13,27 @@
 	}
 	else{
 ?>
-<html>
-  <head>
-    <title>Login</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-		<!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-			</script>
-         <![endif]-->
-  </head>
-  <body>
-	<form id="formulario" method="POST" action="procesarlogin.php">
-		<input type="text" name="usuario">
-		<br>
-		<input type="password" name="clave">
-		<br>
-		<input type="submit" value="Iniciar Sesi&oacute;n">
-	</form>
-	<div id="map-canvas"></div>
-  </body>
-</html>	
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<form role="form">
+			  <div class="form-group">
+				<label for="text">Usuario:</label>
+				<input type="text" class="form-control" id="email">
+			  </div>
+			  <div class="form-group">
+				<label for="pwd">Contraseña:</label>
+				<input type="password" class="form-control" id="pwd">
+			  </div>
+			  <button type="submit" class="btn btn-default">Aceptar</button>
+			</form>
+			<div id="map-canvas"></div>
+		</div>
+	</div>
+</div>
+	
+  	
 <?php
 	}
+	include("footer.html"); 
 ?>

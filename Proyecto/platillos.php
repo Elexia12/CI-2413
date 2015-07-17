@@ -1,4 +1,6 @@
 <?php 
+	include("header.html"); 
+
 	session_start();
 	require_once('fatfree/lib/base.php');
 	require_once('fatfree/lib/db/sql.php');
@@ -12,19 +14,7 @@
 			$categorias=$db->exec('SELECT * FROM categorias');
 			print_r($categorias);
 ?>
-<html>
-  <head>
-    <title>Platillos</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-		<!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-			</script>
-         <![endif]-->
-	<script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
-	<script src="js/funcionTabla.js"></script>
-  </head>
-    <body>
+	<div class="container">
         <form id="formulario" method="POST" action="procesarlogin.php">
 			<input type="submit" value="Cerrar Sesi&oacute;n">
 		</form>
@@ -63,8 +53,7 @@
 			</select>
 			<input type="submit" value="borrar">
 		</form>
-    </body>
-</html>
+	</div>
 <?php
 		}
 		if($_SESSION['permiso'] == 1){
@@ -76,4 +65,5 @@
 		header("Location: http://titanic.ecci.ucr.ac.cr/~eb17016/Proyecto/login.php");
 		die();
 	}
+	include("footer.html"); 
 ?>
